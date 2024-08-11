@@ -29,7 +29,7 @@
                             <i class="bi bi-floppy"></i> Salvar
                         </button>
                     </div>
-                    <div id="edit-button-container" class="col-sm-9" style="display: none;">
+                    <div id="edit-button-container" class="col-sm-6" style="display: none;">
                         <button id="btn-submit-edit" class="btn btn-primary btn-block" type="submit">
                             <i class="bi bi-floppy"></i> Editar
                         </button>
@@ -44,6 +44,12 @@
                                 <i class="bi bi-trash3"></i> Excluir
                             </button>
                         </form>
+                    </div>
+                    <div id="return-button-container" class="col-sm-3" style="display: none;">
+                        <form></form>
+                        <button id="btn-return" class="btn btn-primary btn-block" type="button" onclick="resetToDefaultData()">
+                            <i class="bi bi-arrow-return-left"></i> Voltar
+                        </button>
                     </div>
                 </div>
             </form>

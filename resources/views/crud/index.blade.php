@@ -21,6 +21,10 @@
     const observationField = document.getElementById("observations");
     const hiddenInputMethod = document.getElementById("hidden_method");
     const formStoreUpdate = document.getElementById('form-store-edit');
+    const btnSubmit = document.getElementById('button-container');
+    const btnSubmitEdit = document.getElementById('edit-button-container');
+    const btnDelete = document.getElementById('delete-button-container');
+    const btnReturn = document.getElementById('return-button-container');
 
     if ("{{ session()->has('success') }}") {
         const toastSuccess = document.getElementById('toastSuccess');
@@ -39,13 +43,10 @@
     }
 
     const editRegister = (register) => {
-        const btnSubmit = document.getElementById('button-container');
-        const btnSubmitEdit = document.getElementById('edit-button-container');
-        const btnDelete = document.getElementById('delete-button-container');
-
         btnSubmit.style.display = 'none';
         btnSubmitEdit.style.display = 'block';
         btnDelete.style.display = 'block';
+        btnReturn.style.display = 'block';
 
         setEditDeleteRoutes(register)
         fillEditFields(register);
@@ -87,6 +88,10 @@
         descriptionField.value = "";
         typeField.value = "";
         observationField.value = "";
+        btnSubmit.style.display = 'block';
+        btnSubmitEdit.style.display = 'none';
+        btnDelete.style.display = 'none';
+        btnReturn.style.display = 'none';
 
         formStoreUpdate.action = "{{ route('crud.store') }}";
         hiddenInputMethod.value = "";

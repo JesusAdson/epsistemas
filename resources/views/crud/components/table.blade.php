@@ -42,9 +42,7 @@
                             @endforeach
                         </tbody>
                     </table>
-                    <caption>
-                        {{ $cruds->links() }}
-                    </caption>
+                    {{ $cruds->links() }}
                 </div>
             </div>
         </div>

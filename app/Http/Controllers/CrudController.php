@@ -13,7 +13,7 @@ class CrudController extends Controller
 {
     public function index()
     {
-        $cruds = Crud::query()->paginate(10);
+        $cruds = Crud::query()->orderBy('created_at','asc')->paginate(10);
 
         return view('crud.index', compact('cruds'));
     }
